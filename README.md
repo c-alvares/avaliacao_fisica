@@ -10,9 +10,9 @@
 
 |Documento|Diagrama|
 |-|-|
-|DER Modelo Conceitual|![DER Modelo Conceitual](./docs/mer_der/der_imc.png)|
-|UML - DC|![UML DC (Diagrama de Classes)](./docs/mer_der/uml_dc_imc.png)|
-|UML - DCU|![UML DCU (Diagrama de Casos de Uso)](./docs/mer_der/uml_dcu_imc.png)|
+|DER Modelo Conceitual|![DER Modelo Conceitual](./docs/der_imc.png)|
+|UML - DC|![UML DC (Diagrama de Classes)](./docs/uml_dc_imc.png)|
+|UML - DCU|![UML DCU (Diagrama de Casos de Uso)](./docs/uml_dcu_imc.png)|
 
 |Desafio-1:|
 |-|
