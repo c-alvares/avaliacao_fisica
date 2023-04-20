@@ -8,6 +8,7 @@ const app = express();
 app.use(express.json())
 
 const routes = require('./src/routes/routes')
+
 app.set('view engine', 'pug')
 	.use(express.urlencoded({ extended: true }))
 	.use(express.static("public"))
