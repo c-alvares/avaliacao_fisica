@@ -1,11 +1,47 @@
 head
   meta(charset='utf-8')
-  title Avaliação Física
-  //- link(rel='stylesheet', href='style.css')
-  //- link(rel="shortcut icon" href="ico.png")
-  //- script(src="script.js")
-body()
+  title Folha de Pagamentos
+  link(rel='stylesheet', href='style.css')
+
+body
+  header
+    h1 Avaliação Física
+    button(onclick="modal1.classList.remove('oculto')") Novo Paciente
+    div(id="modal1" class="modal1 oculto")
+      form(action="/create" id="novo" method="post")
+        header(style="grid-column-end: span 2;")
+          h1 Cadastro de Pacientes
+        label Nome:
+        input(type="text" name="nome_completo" placeholder="Digite o nome do paciente" required)
+        label Data de nascimento:
+        input(type="date" name="nascimento" required)
+        label Peso Kg:
+        input(type="number" name="peso" placeholder="0" required)
+        label Altura m:
+        input(type="number" name="altura" placeholder="0" required)
+        input(type="reset" value="Cancelar" onclick="modal1.classList.add('oculto')")
+        input(type="submit" value="Cadastrar")
   main
-    div(style="position: relative;top: 50px;max-width:400px;")
-      h1 Avaliação Física
-      button Novo Paciente
+    table
+      thead
+        tr
+          th Id
+          th Nome
+          th Nascimento
+          th Peso
+          th Altura
+          th Idade
+          th IMC
+          th Diagnóstico
+          th Atualizar
+          th Excluir
+      tbody(id="corpo")
+        tr
+
+  footer
+    //- h2(id="total") Total de Pacientes: #{totalPacientes.toFixed(2)}
+    form(action="/filter")
+      input(type="text" onkeyup="filtroDiagnotico(this.value)")
+      button(type="submit" onclick="location.href='/'") Filtro
+
+script(src="script.js")
